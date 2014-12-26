@@ -60,7 +60,7 @@ instantiate `legacy_userdb`s when converting `*.userdb.kct` format user dictiona
 
 ### Use treedb component
 If you wish to use `treedb` in your own Rime module, you should load `legacy` module before using the components.
-```
+``` C++
 #include <rime_api.h>
 #include <rime/setup.h>
 
