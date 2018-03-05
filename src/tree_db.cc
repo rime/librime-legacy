@@ -269,10 +269,14 @@ bool TreeDb::CommitTransaction() {
 }  // namespace legacy
 
 template <>
-const std::string UserDbFormat<legacy::TreeDb>::extension(".userdb.kct");
+std::string UserDbComponent<legacy::TreeDb>::extension() const {
+  return ".userdb.kct";
+}
 
 template <>
-const std::string UserDbFormat<legacy::TreeDb>::snapshot_extension(".userdb.kcss");
+std::string UserDbComponent<legacy::TreeDb>::snapshot_extension() const {
+  return ".userdb.kcss";
+}
 
 template <>
 UserDbWrapper<legacy::TreeDb>::UserDbWrapper(const std::string& db_name)
